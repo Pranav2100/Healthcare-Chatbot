@@ -412,7 +412,7 @@ def get_bot_response():
     if session['step'] == "Depart":
         session['step'] = "BFS"
         return "Well, Hello " + session["title"] + " " + session[
-            "name"] + ", now I will be asking some few questions about your symptoms to see what you should do. Tap S to start diagnostic!"
+            "name"] + ", now I will be asking some few questions about your symptoms to see what you should do. Type S to start diagnostic!"
     if session['step'] == "BFS":
         session['step'] = "FS"  # first symp
         return "Can you precise your main symptom " + session["title"] + " " + session["name"] + " ?"
@@ -656,7 +656,7 @@ def get_bot_response():
                 session['step'] = "Q_C"
                 return (
                 "As you provided only a few symptoms, I cannot confidently predict your disease yet.<br>"
-                "Please describe more symptoms or tap q to stop."
+                "Please describe more symptoms or type q to stop."
             )
 
             session['step'] = "Description"
@@ -664,11 +664,11 @@ def get_bot_response():
             return (
                 "Well " + session["title"] + " " + session["name"] +
                 ", you may have " + result +
-                ". Tap D to get a description of the disease."
+                ". Type D to get a description of the disease."
             )
         else:
             session['step'] = "Q_C"
-            return "Can you describe more symptoms or tap q to stop the conversation."
+            return "Can you describe more symptoms or type q to stop the conversation."
     
     if session['step'] == "Description":
         y = {"Name": session["name"], "Age": session["age"], "Gender": session["gender"], "Disease": session["disease"],
@@ -684,14 +684,14 @@ def get_bot_response():
     if session['step'] == "Severity":
         session['step'] = 'FINAL'
         if calc_condition(session["all"], int(s)) == 1:
-            return "you should take the consultation from doctor <br> Tap q to exit"
+            return "you should take the consultation from doctor <br> Type q to exit"
         else:
             msg = 'Nothing to worry about, but you should take the following precautions :<br> '
             i = 1
             for e in precautionDictionary[session["disease"]]:
                 msg += '\n ' + str(i) + ' - ' + e + '<br>'
                 i += 1
-            msg += ' Tap q to end'
+            msg += ' Type q to end'
             return msg
     if session['step'] == "FINAL":
         session['step'] = "BYE"
