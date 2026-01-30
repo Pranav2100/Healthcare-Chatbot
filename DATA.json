@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "Name": "Sharu",
+            "Age": 24,
+            "Gender": "female",
+            "Disease": "Chicken pox",
+            "Sympts": [
+                "mild_fever",
+                "headache",
+                "skin_rash",
+                "lethargy",
+                "high_fever",
+                "loss_of_appetite",
+                "swelled_lymph_nodes"
+            ]
+        }
+    ]
+}
