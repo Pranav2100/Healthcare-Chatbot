@@ -4,22 +4,29 @@ from nltk.corpus import wordnet
 import csv
 import json
 import itertools
-from nltk.corpus import stopwords
-STOP_WORDS = set(stopwords.words('english'))
 import joblib
 from flask import Flask, render_template, request, session
 
 import nltk
 from nltk.corpus import stopwords
 
-def load_stopwords():
-    try:
-        return set(stopwords.words("english"))
-    except LookupError:
-        nltk.download("stopwords")
-        return set(stopwords.words("english"))
+NLTK_RESOURCES = [
+    "stopwords",
+    "punkt",
+    "wordnet",
+    "omw-1.4"
+]
 
-STOP_WORDS = load_stopwords()
+def ensure_nltk_resources():
+    for resource in NLTK_RESOURCES:
+        try:
+            nltk.data.find(resource)
+        except LookupError:
+            nltk.download(resource)
+
+ensure_nltk_resources()
+
+STOP_WORDS = set(stopwords.words("english"))
 
 
 app = Flask(__name__)
