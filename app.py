@@ -9,6 +9,16 @@ STOP_WORDS = set(stopwords.words('english'))
 import joblib
 from flask import Flask, render_template, request, session
 
+import nltk
+from nltk.corpus import stopwords
+try:
+    stopwords.words("english")
+except LookupError:
+    nltk.download("stopwords")
+
+STOP_WORDS = set(stopwords.words("english"))
+
+
 app = Flask(__name__)
 
 def get_title(gender):
