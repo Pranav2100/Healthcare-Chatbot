@@ -11,12 +11,15 @@ from flask import Flask, render_template, request, session
 
 import nltk
 from nltk.corpus import stopwords
-try:
-    stopwords.words("english")
-except LookupError:
-    nltk.download("stopwords")
 
-STOP_WORDS = set(stopwords.words("english"))
+def load_stopwords():
+    try:
+        return set(stopwords.words("english"))
+    except LookupError:
+        nltk.download("stopwords")
+        return set(stopwords.words("english"))
+
+STOP_WORDS = load_stopwords()
 
 
 app = Flask(__name__)
