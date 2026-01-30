@@ -10,21 +10,21 @@ from flask import Flask, render_template, request, session
 import nltk
 from nltk.corpus import stopwords
 
-NLTK_RESOURCES = [
-    "stopwords",
-    "punkt",
-    "punkt_tab",
-    "wordnet",
-    "omw-1.4"
-]
+NLTK_RESOURCES = {
+    "stopwords": "corpora/stopwords",
+    "punkt": "tokenizers/punkt",
+    "punkt_tab": "tokenizers/punkt_tab/english",
+    "wordnet": "corpora/wordnet",
+    "omw-1.4": "corpora/omw-1.4",
+}
 
 
 def ensure_nltk_resources():
-    for resource in NLTK_RESOURCES:
+    for pkg, path in NLTK_RESOURCES.items():
         try:
-            nltk.data.find(resource)
+            nltk.data.find(path)
         except LookupError:
-            nltk.download(resource)
+            nltk.download(pkg)
 
 ensure_nltk_resources()
 
