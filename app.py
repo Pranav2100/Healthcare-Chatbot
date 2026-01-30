@@ -13,9 +13,11 @@ from nltk.corpus import stopwords
 NLTK_RESOURCES = [
     "stopwords",
     "punkt",
+    "punkt_tab",
     "wordnet",
     "omw-1.4"
 ]
+
 
 def ensure_nltk_resources():
     for resource in NLTK_RESOURCES:
