@@ -31,7 +31,13 @@ ensure_nltk_resources()
 STOP_WORDS = set(stopwords.words("english"))
 
 
+import os
+
 app = Flask(__name__)
+app.secret_key = os.environ.get(
+    "FLASK_SECRET_KEY",
+    "dev-secret-key-change-this"
+)
 
 def get_title(gender):
     if gender.lower() in ["male", "m"]:
@@ -707,16 +713,3 @@ def get_bot_response():
                 "For more information please contact <b>+91 9604669101</b><br>"
                 "Please refresh the page if you want a new consultation."
             )
-
-
-
-if __name__ == "__main__":
-    import random  # define the random module
-    import string
-
-    S = 10  # number of characters in the string.
-    # call random.choices() string module to find the string in Uppercase + numeric data.
-    ran = ''.join(random.choices(string.ascii_uppercase + string.digits, k=S))
-    # chat_sp()
-    app.secret_key = str(ran)
-    app.run()
