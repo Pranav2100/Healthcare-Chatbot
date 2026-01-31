@@ -32,33 +32,6 @@ It provides disease information, descriptions, and precautions through an intera
 
 ---
 
-## 📁 Project Structure
-
-Healthcare-Chatbot/
-
-├── app.py # Main application file
-
-├── requirements.txt # Dependencies
-
-├── Procfile # Deployment config
-
-├── ROBO_DOC.ipynb # Main documentation & analysis
-
-├── model/ # Trained ML models
-
-├── Medical_dataset/ # Datasets
-
-├── experiments/ # Experimental notebooks
-
-├── templates/ # HTML templates
-
-├── static/ # CSS and images
-
-├── screens/ # UI screenshots
-
-└── .gitignore
-
----
 
 ## ▶️ How to Run the Project Locally
 
