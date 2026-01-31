@@ -35,6 +35,7 @@ It provides disease information, descriptions, and precautions through an intera
 ## 📁 Project Structure
 
 Healthcare-Chatbot/
+
 ├── app.py # Main application file
 ├── requirements.txt # Dependencies
 ├── Procfile # Deployment config
@@ -93,9 +94,6 @@ This project is for educational purposes only and should not be used as a substi
 👤 Author
 
 Pranav Jagtap
-
 GitHub: https://github.com/Pranav2100
-
 LinkedIn: https://www.linkedin.com/in/pranav--jagtap
-
 Email: pranavjagtap2151@gmail.com
