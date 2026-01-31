@@ -48,7 +48,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 4️⃣ Run the application
-python app.p
+python app.py
 
 ---
 
