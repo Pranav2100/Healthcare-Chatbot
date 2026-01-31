@@ -8,6 +8,7 @@ It provides disease information, descriptions, and precautions through an intera
   <img src="screens\prediction.png" width="500" >
 </p>
 
+Live Demo:- https://healthcare-chatbot-9mcn.onrender.com/
 ---
 
 ## 🚀 Features
