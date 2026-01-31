@@ -93,6 +93,9 @@ This project is for educational purposes only and should not be used as a substi
 👤 Author
 
 Pranav Jagtap
+
 GitHub: https://github.com/Pranav2100
+
 LinkedIn: https://www.linkedin.com/in/pranav--jagtap
+
 Email: pranavjagtap2151@gmail.com
