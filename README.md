@@ -50,6 +50,8 @@ pip install -r requirements.txt
 4️⃣ Run the application
 python app.p
 
+---
+
 📓 ROBO_DOC Notebook
 
 ROBO_DOC.ipynb contains:
@@ -61,6 +63,8 @@ Model experimentation
 Final conclusions
 This notebook represents the core research work of the project.
 
+---
+
 🧪 Experiments
 
 The experiments/ folder includes Jupyter notebooks used for:
@@ -70,9 +74,13 @@ Model comparison
 Data preprocessing
 These are for research and learning purposes.
 
+---
+
 ⚠️ Disclaimer
 
 This project is for educational purposes only and should not be used as a substitute for professional medical advice.
+
+---
 
 👤 Author
 
